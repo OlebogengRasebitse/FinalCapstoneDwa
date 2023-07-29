@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 import HomePage from './Components/HomePage'
+
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <h1>PODACST APP</h1> 
       <HomePage />
+    
     </>
   )
 }

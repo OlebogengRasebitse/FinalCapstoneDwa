@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ImagePreview from './ImagePreview';
+// import ImagePreview from './ImagePreview';
 
 export default function HomePage() {
   const [data, setData] = useState([]); // Use an empty array as initial state
@@ -44,10 +44,11 @@ export default function HomePage() {
       <ul className="card-list">
         {data.map((item) => (
           <li key={item.id} className="card-item">
-            <ImagePreview imageUrl={item.image} />
             <div>
               <span className="user-id">{item.userId}</span>
+              <img src={item.image} alt={item.title} />
               <span className="title">{item.title}</span>
+              {<span className="title">Seasons: {item.seasons}</span>}
             </div>
             <button onClick={() => handleShowDetails(item.id)}>Show Details</button>
           </li>
