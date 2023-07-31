@@ -1,3 +1,4 @@
+// ImagePreview.js
 import React, { useState } from 'react';
 
 const ImagePreview = ({ imageUrl }) => {
@@ -20,4 +21,3 @@ const ImagePreview = ({ imageUrl }) => {
 };
 
 export default ImagePreview;
-
