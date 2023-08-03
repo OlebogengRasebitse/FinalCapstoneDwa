@@ -1,5 +1,3 @@
-// HomePage.js
-
 import React, { useState, useEffect } from 'react';
 import PodcastDetailsSection from './PodcastDetailsSection';
 import PodcastModal from './PodcastModal';
@@ -7,9 +5,15 @@ import TitleFilter from './TittleFiltre';
 import DateFilter from './DateFiltre';
 import SearchFilter from './SearchFiltre';
 import GenreFilter from './GenreFiltre';
-
+import DescriptionToggle from './DiscriptionToggle';
+import supabase from '../config/supabaseClient';
+import FavoriteButton from './FavoriteButton';
+import Carousel from './Carousel';
 
 const HomePage = () => {
+
+  console.log(supabase)
+
   const [data, setData] = useState([]);
   const [selectedPodcast, setSelectedPodcast] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,6 +21,9 @@ const HomePage = () => {
   const [sortOrderDate, setSortOrderDate] = useState('dateAsc');
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+ 
+
+    
 
   const genreMap = {
     1:	'Personal Growth',
@@ -111,6 +118,7 @@ const HomePage = () => {
     return sortedData;
   };
 
+  
   return (
     <div className="card-grid">
       <div className="filters">
@@ -119,6 +127,8 @@ const HomePage = () => {
         <GenreFilter onGenreChange={handleGenreChange} />
         <SearchFilter onSearchQueryChange={handleSearchQueryChange} />
       </div>
+      <FavoriteButton />
+      <Carousel possibleShows={data} />
       {isLoading ? (
         <div>Loading Please Relax...</div>
       ) : (
@@ -128,6 +138,7 @@ const HomePage = () => {
               <div>
                 <span className="user-id">{item.userId}</span>
                 <img src={item.image} alt={item.title} />
+                <FavoriteButton />
                 <span className="title">{item.title}</span>
                 <br />
                 <span className="genre">Genre: {item.genres.map(genreId => genreMap[genreId]).join(', ')}</span>
@@ -137,9 +148,9 @@ const HomePage = () => {
                 <span className="updated">Updated: {item.updated}</span>
                 <br />
                 <br />
-                <span className="description">{item.description}</span>
+             
                 <br />
-                <span className="title">Updated Date: {item.updated}</span>
+                <DescriptionToggle description={item.description} />
               </div>
               <button onClick={() => handleShowDetails(item.id)}>Show Details</button>
             </li>

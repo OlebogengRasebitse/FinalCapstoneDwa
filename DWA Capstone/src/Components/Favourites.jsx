@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Favourites() {
-    return ( 
-    <h3>Favourites</h3>);
-}
 
+  function Favourites() {
+    return ( <p>Favourites Page</p> );
+  }
+  
+  export default Favourites;
