@@ -4,7 +4,8 @@ import Navbar from './Components/NavBar'
 
 //Pages
 import HomePage from './Components/HomePage'
-import Favourites from './Components/Favourites'
+
+import FavouritesList from './Components/FavouritesList'
 // import Favourites from './Components/Favourites'
 
 
@@ -16,7 +17,7 @@ function App() {
 
     <Routes>
       <Route path="/"element={<HomePage />} />
-       <Route path="/Favourites" element={<Favourites />} />
+       <Route path="/FavouritesList" element={<FavouritesList />} />
     </Routes>
     </BrowserRouter>
   )

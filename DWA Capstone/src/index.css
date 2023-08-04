@@ -14,7 +14,6 @@
 
 }
 
-/* Style for the card grid container */
 .card-list {
   list-style-type: none; /* Remove bullet points */
   display: grid; /* Apply grid positioning */
@@ -49,33 +48,84 @@
   border-radius: 10px;
 }
 
-.user-id, .title {
+.user-id, .title, .genre, .season, .updated {
   text-align: center;
   font-size: 16px;
-
 }
 
-.genre {
-  text-align: center;
-  font-size: 14px;
+/* Media query for iPhone SE */
+@media (max-width: 320px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust the grid columns for smaller screens */
+  }
+
+  .card-item img {
+    height: 150px; /* Adjust the image height for smaller screens */
+  }
+
+  .user-id, .title, .genre, .season, .updated {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
 }
 
-.season {
-  text-align: center;
-  font-size: 14px;
+/* Navbar.css */
+.navbar {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.updated {
-  text-align: center;
-  font-size: 14px;
+.navbar-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for a nice effect */
+  margin-right: auto;
 }
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.navbar-link:hover {
+  border-bottom: 2px solid #1db954;
+}
+
+/* Media query for iPhone SE */
+@media (max-width: 660px) {
+  .navbar {
+    padding: 0.5rem; 
+    width: 800px;
+    
+  }
+
+  .navbar-title {
+    font-size: 20px; 
+  }
+
+  .navbar-link {
+    font-size: 14px; 
+    margin-right: 0.5rem; 
+  }
+}
+
+
 
 
 /* Carousel Modal */
 .carousel-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
 }
 
 .slick-slide {
@@ -113,6 +163,27 @@
 
 .carousel-title:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Carousel Modal for iPhone SE and similar screens */
+@media (max-width: 660px) {
+  .carousel-container {
+    padding: 10px;
+  }
+
+  .slick-slide {
+    padding: 0 5px;
+  }
+
+  .carousel-item {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .carousel-title {
+    bottom: 5px;
+    font-size: 12px;
+  }
 }
 
 
@@ -161,11 +232,12 @@ height: 190px;
 }
 
 
-.Carousel.css carousel-container {
+/* .Carousel.css carousel-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-}
+  padding-bottom: 1px;
+} */
 
 .slick-slider {
   position: relative;
@@ -186,9 +258,11 @@ height: 190px;
 
 .carousel-item img {
   width: 100%;
-  border-radius: 5px;
+height: auto;
+border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  
 }
 
 .carousel-item img:hover {
@@ -197,7 +271,7 @@ height: 190px;
 
 .carousel-title {
   position: absolute;
-  bottom: 10px;
+  bottom: 5%;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
@@ -207,6 +281,8 @@ height: 190px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .carousel-title:hover {
@@ -314,35 +390,7 @@ height: 190px;
   border-radius: 5px;
 }
 
-/* Navbar.css */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
 
-.navbar-logo {
-  width: 80px;
-}
-
-.navbar-links {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.navbar-link {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 1rem;
-  padding: 0.5rem;
-}
-
-.navbar-link:hover {
-  border-bottom: 2px solid #2c7036;
-  
-}
 
 
 .selected-season-button {
@@ -393,19 +441,12 @@ height: 190px;
   transition: background-color 0.2s ease-in-out;
 }
 
-.filters button:hover {
-  background-color: #1ed760;
-}
-
-.filters button.selected {
-  background-color: #1ed760;
-}
 
 .filters input[type="text"] {
   padding: 10px;
   margin-right: 10px;
   margin-bottom: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid  #378941;;
   border-radius: 30px;
   font-size: 14px;
 }
@@ -414,7 +455,7 @@ height: 190px;
   padding: 5px;
   margin-bottom: 10px;
   margin: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #378941;;
   border-radius: 30px;
   font-size: 14px;
 }
@@ -429,4 +470,15 @@ height: 190px;
   .filters {
     margin-bottom: 20px;
   }
+}
+
+
+button {
+  padding: 10px 20px;
+  background-color: #378941;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }

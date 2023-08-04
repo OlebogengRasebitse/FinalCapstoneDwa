@@ -1,13 +1,9 @@
-// AudioPlayer.js
 import React, { useState, useEffect } from 'react';
 
 const AudioPlayer = ({ episode }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    // Implement audio player logic here based on the 'episode' prop
-    // For example, load the audio file, handle play/pause, etc.
-    // For simplicity, this example only toggles play/pause state
     const audioElement = new Audio(episode.file);
 
     if (isPlaying) {

@@ -1,4 +1,3 @@
-// SearchFilter.js
 import React from 'react';
 
 const SearchFilter = ({ onSearchQueryChange }) => {

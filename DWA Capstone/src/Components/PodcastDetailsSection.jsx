@@ -44,7 +44,6 @@ const PodcastDetailsSection = ({ selectedPodcast }) => {
       />
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <FavoriteButton />
-        <span style={{ marginLeft: '8px' }}>Add to Favorites</span>
       </div>
       <h2>{selectedPodcast.title}</h2>
       <p>{selectedPodcast.summary}</p>

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -10,12 +11,11 @@ const Navbar = () => {
       </Link>
       <div className="navbar-links">
         <Link className="navbar-link" to="/">
-          Home
+     
         </Link>
         <Link className="navbar-link" to="/Favourites">
-          Favourites List
+          Favourites
         </Link>
-        {/* Add more navigation links as needed */}
       </div>
     </nav>
   );
