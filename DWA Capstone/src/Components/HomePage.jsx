@@ -7,9 +7,9 @@ import DateFilter from './DateFiltre';
 import SearchFilter from './SearchFiltre';
 import GenreFilter from './GenreFiltre';
 import DescriptionToggle from './DiscriptionToggle';
-import FavoriteButton from './FavoriteButton';
+// import FavoriteButton from './FavoriteButton';
 import Carousel from './Carousel';
-import Favourites from './Favourites'; // Import the Favourites component
+// import Favourites from './Favourites'; // Import the Favourites component
 
 const HomePage = () => {
   const [data, setData] = useState([]);
