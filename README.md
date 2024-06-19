@@ -1,14 +1,8 @@
-# FinalCapstoneDwa
-Welcome to the Podcast App! This web application allows users to discover and listen to a wide range of podcasts conveniently.
+# React + Vite
 
-## Features
-- Browse curated podcasts
-- Search podcasts by title, genre, or keyword
-- Listen to episodes directly within the app
-- Save favorite podcasts for easy access
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Technologies
-- React
-- Vite
-- Material-UI
-- React Slick
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

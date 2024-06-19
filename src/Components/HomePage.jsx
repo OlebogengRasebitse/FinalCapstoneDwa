@@ -1,12 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import PodcastDetailsSection from './PodcastDetailsSection';
 import PodcastModal from './PodcastModal';
-import TitleFilter from './TittleFiltre';
-import DateFilter from './DateFiltre';
-import SearchFilter from './SearchFiltre';
-import GenreFilter from './GenreFiltre';
-import DescriptionToggle from './DiscriptionToggle';
+import TitleFilter from './TitleFilteR';
+import DateFilter from './DateFilter';
+import SearchFilter from './SearchFilter';
+import GenreFilter from './GenreFilter';
+import DescriptionToggle from './DescriptionToggle';
 // import FavoriteButton from './FavoriteButton';
 import Carousel from './Carousel';
 // import Favourites from './Favourites'; // Import the Favourites component
