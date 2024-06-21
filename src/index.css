@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -53,6 +53,68 @@
   font-size: 16px;
 }
 
+/* NAVBAR */
+
+.navbar h2{
+color: #000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1DB954; /* Spotify Green */
+  color: #FFFFFF;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px; /* Adjust the size*/
+  margin-right: 0.5rem;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-link {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+
+/*some hover effects for better interactivity */
+.navbar-link:hover {
+  color: #1DB954; /*Spotify Green */
+  background-color: #FFFFFF; /* On hover, change background to white */
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.5rem; /*some padding */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-link {
+    margin: 0.5rem 0;
+  }
+}
+
 /* Media query for iPhone SE */
 @media (max-width: 320px) {
   .card-list {
@@ -69,8 +131,8 @@
 }
 
 /* Navbar.css */
-.navbar {
-  background-color: #000;
+/* .navbar {
+  background-color: #686868;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -80,7 +142,7 @@
   color: #fff;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for a nice effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for a nice effect 
   margin-right: auto;
 }
 
@@ -98,7 +160,7 @@
 
 .navbar-link:hover {
   border-bottom: 2px solid #1db954;
-}
+} */
 
 /* Media query for iPhone SE */
 @media (max-width: 660px) {
