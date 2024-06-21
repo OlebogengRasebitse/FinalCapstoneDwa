@@ -136,7 +136,6 @@ const HomePage = () => {
 
   return (
     <div className="card-grid">
-      <h1>Podcasts</h1>
       {isLoading ? (
         <div>Loading Please Relax...</div>
       ) : (

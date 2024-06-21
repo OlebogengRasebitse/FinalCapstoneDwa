@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/wave-sound.png';
+import logo from '../images/wave-sound.png';
 
 const Navbar = () => {
   return (
