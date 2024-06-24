@@ -7,9 +7,10 @@ import React, { useState, useEffect } from 'react';
 // import GenreFilter from './GenreFilter';
 import DescriptionToggle from './DescriptionToggle';
 // import Carousel from './Carousel';
+import FormattedDate from './FormatDate';
 
 const HomePage = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); //list of podcasts fetched from the API.
   const [selectedPodcast, setSelectedPodcast] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   // const [sortOrderTitle, setSortOrderTitle] = useState('az');
@@ -33,11 +34,11 @@ const HomePage = () => {
     9: 'Kids and Family',
   };
 
+  //function fetches the list of podcasts from the API and updates the data state variable.
   const apiGet = () => {
     fetch('https://podcast-api.netlify.app/shows')
       .then((response) => response.json())
       .then((json) => {
-        console.log('API data:', json); // Log API response
         setData(json);
         setIsLoading(false);
       })
@@ -152,7 +153,9 @@ const HomePage = () => {
                 <br />
                 <span className="season">Seasons: {item.seasons}</span>
                 <br />
-                <span className="updated">Updated: {item.updated}</span>
+                <span className="updated">
+                Updated: <FormattedDate date={item.updated} />
+                </span>
                 <br />
                 <DescriptionToggle description={item.description} />
               </div>
