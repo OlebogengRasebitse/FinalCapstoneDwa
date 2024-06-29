@@ -5,7 +5,7 @@ import Navbar from './Components/NavBar'
 //Pages
 import HomePage from './Components/HomePage'
 
-import FavouritesList from './Components/FavouritesList'
+import Favourites from './Components/Favourites'
 // import Favourites from './Components/Favourites'
 
 
@@ -14,10 +14,9 @@ function App() {
   return (
     <BrowserRouter>
        <Navbar />
-
     <Routes>
       <Route path="/"element={<HomePage />} />
-       <Route path="/FavouritesList" element={<FavouritesList />} />
+       <Route path="/Favourites" element={<Favourites />} />
     </Routes>
     </BrowserRouter>
   )

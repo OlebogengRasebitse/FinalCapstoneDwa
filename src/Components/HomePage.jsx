@@ -8,6 +8,7 @@ import React, { useState, useEffect } from 'react';
 import DescriptionToggle from './DescriptionToggle';
 // import Carousel from './Carousel';
 import FormattedDate from './FormatDate';
+import FavoriteButton from './FavoriteButton';
 
 const HomePage = () => {
   const [data, setData] = useState([]); //list of podcasts fetched from the API.
@@ -145,6 +146,9 @@ const HomePage = () => {
             <li key={item.id} className="card-item">
               <div>
                 <img src={item.image} alt={item.title} />
+               
+                <FavoriteButton />
+                
                 <span className="title">{item.title}</span>
                 <br />
                 <span className="genre">
