@@ -146,9 +146,7 @@ const HomePage = () => {
             <li key={item.id} className="card-item">
               <div>
                 <img src={item.image} alt={item.title} />
-               
                 <FavoriteButton />
-                
                 <span className="title">{item.title}</span>
                 <br />
                 <span className="genre">
@@ -163,7 +161,7 @@ const HomePage = () => {
                 <br />
                 <DescriptionToggle description={item.description} />
               </div>
-              <button onClick={() => handleShowDetails(item.id)}>Show Details</button>
+              <button className="showDetails" onClick={() => handleShowDetails(item.id)}>Show Details</button>
             </li>
           ))}
         </ul>

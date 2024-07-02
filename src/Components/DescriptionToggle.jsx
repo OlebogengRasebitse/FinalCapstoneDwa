@@ -11,7 +11,7 @@ const DescriptionToggle = ({ description }) => {
     <span className="description" onClick={toggleDescription}>
       {isMinimized ? (
         <>
-          {description.substr(0, 100)}
+          {description.substr(0, 200)}
           <button>Read More</button>
         </>
       ) : (

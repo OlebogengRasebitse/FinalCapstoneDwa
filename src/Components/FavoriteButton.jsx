@@ -32,7 +32,7 @@ const FavoriteButton = () => {
     };
   
     return (
-      <button onClick={toggleFavorite}>
+      <button className="favoriteButton" onClick={toggleFavorite}>
         {isFavorited ? 'Unfavorite' : 'Favorite'}
       </button>
     );
